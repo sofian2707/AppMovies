@@ -1,0 +1,30 @@
+.footerBox{
+    position: fixed;
+    bottom: 0%;
+    height: 9vh;
+    width: 100%;
+    background-color: rgba(18, 24, 41, 0.8) !important;
+    backdrop-filter: blur(40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titleBox{
+    margin: 0%;
+    font-family: 'Poppins', sans-serif;    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #9a9da5; 
+}
+
+@media screen and (max-width:480px) {
+    .footerBox{
+        height: 6vh;
+    }
+    .titleBox{
+        font-size: 0.8rem;
+    }
+    }

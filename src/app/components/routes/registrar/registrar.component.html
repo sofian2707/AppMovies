@@ -1,0 +1,33 @@
+<div class="container d-flex justify-content-start box">
+    <div class="rectangle">
+        <img src="../assets/Saly-11.png" alt="sally">
+    </div>
+    <div class="rectangleTwo">
+        <h1 class="title">Registrar</h1>
+        <form [formGroup]="form" autocomplete="off">
+            <div class="baseInput">
+                <i class="fa-regular fa-envelope icon"></i>
+                <input formControlName="email" type="email" placeholder="Email" class="input" >
+            </div>
+            <div class="text-center">
+                <span class="form-text text-danger" *ngIf="campoEsValido('email')">Por favor ingresa email valido</span>
+            </div>
+            <div class="baseInput">
+                <i class="fa-solid fa-key icon"></i>
+                <input formControlName="password" type={{type}} placeholder="Contraseña" class="input">
+                <i (click)="openEye()" [ngClass]="eye == false ? 'fa-regular fa-eye-slash eye' : 'fa-regular fa-eye eye' " > </i>
+            </div>
+            <div class="text-center">
+                <span class="form-text text-danger" *ngIf="campoEsValido('password')">Por favor ingresa contraseña</span>
+            </div>
+        </form>
+        <div class="boxRegistro">
+            <p class="cuenta">¿No tienes cuenta?<span routerLink="/Ingresar" class="registro">Ingresar</span></p>
+        </div>
+        <div>
+            <input (click)="onRegister()" type="submit" class="button" value="Registrar">
+        </div>
+        <div class="d-flex justify-content-around rectangleBox">
+        </div>
+    </div>
+</div>

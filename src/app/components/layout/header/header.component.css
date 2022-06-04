@@ -1,0 +1,41 @@
+.navbarTwo {
+    background-color: rgba(18, 24, 41, 0.8) !important;
+    backdrop-filter: blur(40px)!important;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.group-item{
+    margin-right: 25px;
+}
+.nav-item{
+    cursor: pointer;
+    padding-right: 1em;
+    font-family: 'Poppins', sans-serif;    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #9a9da5; 
+    margin: 0px 8px;
+    }
+
+.navbar-toggler{
+    color: #7B6EF6!important;
+}
+.navbar-toggler-icon{
+    color: #9a9da5 !important;
+}
+.nav-link{
+    color: #9a9da5 !important;
+}
+.nav-link:hover{
+    color: #7B6EF6 !important;
+}
+.active{
+    color: #7B6EF6!important;
+}
+

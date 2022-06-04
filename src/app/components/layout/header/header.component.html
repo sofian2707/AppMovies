@@ -1,0 +1,64 @@
+<!-- <header>
+    <div class= "container navbar d-flex align-items-center justify-content-between">
+        <div>
+            <img  routerLink="Inicio" class="logo" src="../assets/logo.png" alt="logo">
+        </div>
+        <div>
+            <ul class="group-item">
+                <li routerLink="Inicio" class="item">Inicio</li>
+                <li routerLink="Peliculas" class="item">Peliculas</li>
+                <li routerLink="Series" class="item">Series</li>
+                <li routerLink="Ingresar" class="item">Ingresar -></li>
+              </ul>
+        </div>
+    </div>
+</header> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbarTwo" *ngIf="user$ | async as user; else elseBlock">
+  <div class="container">
+    <a class="navbar-brand" (click)="onClassActivate('Inicio')">
+      <img  routerLink="/" class="logo" src="../assets/logo.png" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon navbar-light"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+          <li class="nav-item" *ngIf="user">
+            <a [ngClass]="classActivate =='Dashboard' ? 'nav-link active' : 'nav-link' " (click)="onClassActivate('Dashboard')"  routerLink="/Dashboard" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item" *ngIf="user">
+            <a [ngClass]="classActivate =='Agregar' ? 'nav-link active' : 'nav-link' " (click)="onClassActivate('Agregar')"  routerLink="/nuevoItem">Agregar</a>
+          </li>
+          <li class="nav-item" *ngIf="user">
+            <a [ngClass]="classActivate =='Ingresar' ? 'nav-link active' : 'nav-link'" (click)="onLogout()" (click)="onClassActivate('Salir')"  routerLink="/"><- Salir</a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+<ng-template #elseBlock>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbarTwo ">
+    <div class="container">
+      <a class="navbar-brand" (click)="onClassActivate('Inicio')">
+        <img  routerLink="/" class="logo" src="../assets/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon navbar-light"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <a [ngClass]="classActivate =='Peliculas' ? 'nav-link active' : 'nav-link' " (click)="onClassActivate('Peliculas')"  routerLink="Peliculas" href="#">Peliculas</a>
+            </li>
+            <li class="nav-item">
+              <a [ngClass]="classActivate =='Series' ? 'nav-link active' : 'nav-link' " (click)="onClassActivate('Series')"  routerLink="Series">Series</a>
+            </li>
+            <li class="nav-item">
+              <a [ngClass]="classActivate =='Ingresar' ? 'nav-link active' : 'nav-link' " (click)="onClassActivate('Ingresar')"  routerLink="Ingresar">Ingresar -></a>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+</ng-template>

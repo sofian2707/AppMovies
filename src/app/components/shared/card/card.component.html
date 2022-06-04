@@ -1,0 +1,50 @@
+
+    <div *ngIf="movies_series?.name; else elseBlock" class="bodyCard" >
+        <div>
+            <img src="https://image.tmdb.org/t/p/w500{{movies_series?.poster_path}}" alt="{{movies_series?.original_title}}" class="imageCard" [routerLink] = "['/tvShowDetailsPage', movies_series?.id]">
+        </div>
+        <div class="titleCard">
+            <p class="titleMovie">{{movies_series?.name}}</p>
+        </div>
+        <div>
+            <p class="raiting"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star icon" viewBox="0 0 16 16">
+                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+              </svg></span> {{movies_series?.vote_average | number:'1.1'}}</p>
+        </div>
+        <div *ngIf= "user$ | async as user " >
+            <div *ngIf="user && path == '/nuevoItem'" class="d-flex flex-row boxAdd"> 
+                <i class="fa-regular fa-plus plus"></i><p (click)="addItem(movies_series?.id)" (click)="openSnackBar()" class="add">Agregar a mi lista</p>
+            </div>
+            <div *ngIf="user && path == '/misSeries'" class="d-flex flex-row boxAdd">
+                <i class="fa-solid fa-minus minus"></i><p (click)="deleteItem(movies_series?.id)" (click)="openSnackBarDelete()" class="addEliminar">Eliminar de mi lista</p>
+            </div>
+        </div>
+        
+</div>
+
+
+<ng-template #elseBlock>
+        <div *ngIf="movies_series?.title" class="bodyCard" >
+            <div>
+                <img src="https://image.tmdb.org/t/p/w500{{movies_series?.poster_path}}" alt="{{movies_series?.title}}" class="imageCard" [routerLink] = "['/movieDetailsPage', movies_series?.id]">
+            </div>
+            <div class="titleCard">
+                <p class="titleMovie">{{movies_series?.title}}</p>
+            </div>
+            <div>
+                <p class="raiting"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star icon" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                  </svg></span> {{movies_series?.vote_average | number:'1.1'}}</p>
+            </div>
+            <div *ngIf= "user$ | async as user">
+                <div *ngIf="user && path == '/nuevoItem'" class="d-flex flex-row boxAdd">
+                    <i class="fa-regular fa-plus plus"></i><p (click)="addItemMovie(movies_series?.id)" (click)="openSnackBar()"class="add">Agregar a mi lista</p>
+                </div>
+                <div *ngIf="user && path == '/misPeliculas'" class="d-flex flex-row boxAdd">
+                    <i class="fa-solid fa-minus minus"></i><p (click)="deleteItemMovie(movies_series?.id)"  (click)="openSnackBarDelete()"class="addEliminar">Eliminar de mi lista</p>
+                </div>
+            </div>
+        </div>
+</ng-template>
+
+

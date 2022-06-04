@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #121829;
+    background-image:url("./assets/background.jpg") ;
+    background-repeat: no-repeat;
+}
+::-webkit-scrollbar {
+    display: none;
+    }
+
+
+.purple-snackbar {
+    font-family: 'Poppins', sans-serif;
+    background: #7B6EF6;
+    color: #FFFFFF;
+    position: fixed;
+    bottom: 6%;
+    left:36%;
+    padding: 0%;
+  }
+
+  .purple-snackbar button {
+    font-family: 'Poppins', sans-serif;  
+    background:none;
+    color: white;
+    border: 2px solid #FFFFFF;
+}
+    .red-snackbar {
+    font-family: 'Poppins', sans-serif;   
+    background: #FF6161;
+    color: #FFFFFF;
+    position: fixed;
+    bottom: 6%;
+    left:36%
+  }
+
+  .red-snackbar button {
+    font-family: 'Poppins', sans-serif;  
+    background:none;
+    color: white;
+    border: 2px solid #FFFFFF;
+}
+
+.flex{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  flex-wrap:wrap
+}
+
+@media screen and (max-width:480px) {
+  .flex{
+    justify-content:center;
+  }
+  .purple-snackbar{
+    left:7.3%;
+    width: 80% !important;
+  }
+  .red-snackbar{
+    left:7.3%;
+    width: 80% !important
+  }
+
+}

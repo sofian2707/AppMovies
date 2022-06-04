@@ -1,0 +1,84 @@
+.cardSection{
+  margin-top: 2%;
+  margin-bottom: 7% ;
+}
+.titles{
+    margin-top: 5%;
+}
+.title{
+    font-family: 'Poppins', sans-serif;    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    letter-spacing: -0.02em;
+    color: #EBEEF5;
+}
+.box{
+    margin-top:1.8%;
+    margin-bottom:6%
+}
+ .baseinput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+    background-color:rgba(0, 0, 0, 0.1);
+    height: 64px;
+    width: 344px;
+    border: 1px solid #323B54;
+    box-sizing: border-box;     
+    border-radius: 12px;
+  }
+  .icon{
+   margin-left: 4%;
+   height: 19px;
+   width: 19px;
+   color:#475069;
+   
+  }
+  .input{
+   margin-left: 5%;
+   background: none;
+   border: none;
+   font-family: 'Poppins', sans-serif;    
+   font-style: normal;
+   font-size: 14px;
+   line-height: 16px;
+   color: #475069;
+  font-weight: 400;
+  letter-spacing: 0em;
+  outline: none;
+  }
+  .inputButton{
+    margin-left: 8%;
+    padding: 16px 32px;
+    width: 119px;
+    background: #7B6EF6;
+    border: 2px solid #7B6EF6;
+    border-radius: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+
+  @media screen and (max-width:480px) {
+    .baseinput{
+      width: 70%;
+    }
+    .inputButton{
+      width: 100%;
+      padding: 16px 22px;
+    }
+    .box{
+      margin-top: 5%;
+      margin-bottom: 10%;
+    }
+    .title{
+      font-size: 2.4rem;
+    }
+  }
+
+   

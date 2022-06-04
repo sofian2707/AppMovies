@@ -1,0 +1,31 @@
+<section class="titles">
+    <div class="container">
+        <div class ="d-flex flex-column align-items-start">
+            <p class="paragraph">PelisUP!</p>
+            <h1 class="title">Peliculas</h1>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="baseinput">
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div>
+            <input type="text" placeholder="Buscar peliculas" class="input" [(ngModel)]="toSearch" (ngModelChange)="search()">
+        </div>
+    </div>
+    <div class="itemBox">
+       <p class="items">{{items}}</p>
+    </div>
+</section>
+<section class="cardSection">
+    <div class="container">
+            <!-- <div class="row row-cols-xs-12 row-cols-sm-12 row-cols-md-2 row-cols-lg-4 row-cols-lg-4"> -->
+            <div class="flex">
+                <div *ngFor="let title of movie">
+                    <app-card [movies_series] = title></app-card>
+                </div>
+            </div>
+        </div>  
+</section>

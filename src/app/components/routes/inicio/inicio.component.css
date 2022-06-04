@@ -1,0 +1,139 @@
+.cardSection{
+    margin-top: 2%;
+    margin-bottom: 7% ;
+}
+.titles{
+    margin-top: 55px;
+}
+.title{
+   width: 247px;
+   height: 80px;
+   
+   /* Heading/H1 */
+   
+   font-family: 'Poppins', sans-serif;    
+   font-style: normal;
+   font-weight: 600;
+   font-size: 64px;
+   line-height: 80px;
+   /* identical to box height, or 125% */
+   
+   letter-spacing: -0.02em;
+   
+
+   
+   color: #EBEEF5;
+   
+}
+.paragraph{
+    margin-top: 8px;
+    width: 588px;
+    height: 24px;
+    
+    font-family: 'Poppins', sans-serif;    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    
+    color: #8E95A9;
+   
+ }
+ .basefilter{
+    margin-top:80px;
+    height: 56px;
+    width: 386px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(80px);
+  }
+  .filter{
+     width: 115px;
+     height: 40px;
+     border: rgba(0, 0, 0, 0.2);
+     border-radius: 8px;
+     background:none;
+    font-family: 'Poppins', sans-serif;    
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #8E95A9;
+  }
+  .filterActivate{
+    background: #7B6EF6;
+    color: #EBE9FE;
+  }
+  .titleBox{
+    margin-top: 2%;
+  }
+  .titleFilter{
+    display: inline;
+    height: 40px;
+    width: 142px;
+    font-family: 'Poppins', sans-serif;    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    color: #767E94;
+   }
+   .totalFilter{
+    margin-left: 0.5%;
+    font-family: 'Poppins', sans-serif;    
+    color: #767E94;
+   }
+   .baseinput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+    margin-top: 40px;
+    background-color:rgba(0, 0, 0, 0.1);
+    height: 64px;
+    width: 344px;
+    border: 1px solid #323B54;
+    box-sizing: border-box;     
+    border-radius: 12px;
+  }
+  .icon{
+   margin-left: 4%;
+   height: 19px;
+   width: 19px;
+   color:#475069;
+   
+  }
+  .input{
+   margin-left: 5%;
+   background: none;
+   border: none;
+   font-family: 'Poppins', sans-serif;    
+   font-style: normal;
+   font-size: 14px;
+   line-height: 16px;
+   color: #475069;
+  font-weight: 400;
+  letter-spacing: 0em;
+  outline: none;
+ 
+  }
+
+  @media screen and (max-width:480px) {
+    .cardSection{
+      margin-top: 6%;
+    }
+    .basefilter{
+      margin-top:10%;
+    }
+    .titleBox{
+      margin-top: 4%;
+    }
+    .titles{
+      margin-top: 4%;
+    }
+    .baseinput{
+      margin-top: 5%;
+    }
+    }
+
+    

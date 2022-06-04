@@ -1,0 +1,61 @@
+<section class="titles">
+    <div class="container">
+        <div class ="d-flex align-items-center">
+            <h1 class="title">PelisUP!</h1>
+        </div>
+        <div class ="d-flex align-items-center">
+            <p class="paragraph">Plataforma para ver peliculas y series 😉</p>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="baseinput">
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div>
+            <input type="text" placeholder="Buscar peliculas y series" class="input" [(ngModel)]="toSearch" (ngModelChange)="search(toSearch)" >
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="basefilter d-flex align-items-center justify-content-around">
+        <div>
+            <input [ngClass]="filter =='Todos' ? 'filter filterActivate' : 'filter' " type="button" value="Todos" (click)="filterActivate('Todos')">
+        </div>
+        <div>
+            <input [ngClass]="filter == 'Peliculas' ? 'filter filterActivate' : 'filter' " type="button" value="Peliculas"  (click)="filterActivate('Peliculas')">
+        </div>
+        <div>
+            <input [ngClass]="filter == 'Series' ? 'filter filterActivate' : 'filter' " type="button" value="Series"  (click)="filterActivate('Series')">
+        </div>
+    </div>
+    <div class="titleBox">
+        <h3 class="titleFilter">{{filter}}</h3> <span class="totalFilter">({{total}})</span>
+    </div>
+</section>
+<section class="cardSection">
+    <div class="container">
+        <div *ngIf="filter == 'Todos'">
+            <div class="flex">
+                    <div *ngFor="let title of movies_series">
+                            <app-card *ngIf="title.media_type == 'movie' || title.media_type == 'tv' " [movies_series]= title></app-card>
+                    </div>        
+            </div>
+        </div>
+        <div *ngIf="filter == 'Peliculas'">
+            <div class="flex">
+                    <div *ngFor="let title of movie">
+                            <app-card [movies_series]= title></app-card>
+                    </div>        
+            </div>
+        </div>
+        <div *ngIf="filter == 'Series'">
+            <div class="flex">
+                    <div *ngFor="let title of serie">
+                            <app-card [movies_series]= title></app-card>
+                    </div>        
+            </div>
+        </div>
+    </div>  
+</section>

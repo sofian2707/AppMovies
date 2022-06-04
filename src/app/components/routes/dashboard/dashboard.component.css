@@ -1,0 +1,75 @@
+.titleBox{
+    margin-top: 7%;
+    
+}
+.title{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 56px;
+letter-spacing: -0.02em;
+color: #EBEEF5;
+}
+.dashBox{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+margin-top: 3%;
+}
+.numberBox{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 40px 16px;
+width: 588px;
+height: 152px;
+background: #121829;
+opacity: 0.8;
+border-radius: 12px;
+cursor: pointer;
+}
+.number{
+margin: 0%;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 40px;
+letter-spacing: -0.02em;
+color: #EBEEF5;
+}
+.paragraph{
+margin: 0%;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #767E94;    
+}
+.numberBox:hover{
+background: #131d38;
+opacity: 0.8;
+border-radius: 12px;
+border: 2px solid #EBEEF5 ;
+}
+
+@media screen and (max-width:480px) {
+    .dashBox{
+        display: flex;
+        flex-direction: column;
+    }
+    .numberBox{
+        width: 94%;
+        margin-bottom: 15%;
+    }
+    .titleBox{
+        margin-top: 15%;
+    }
+    .title{
+        margin-bottom: 12%;
+    }
+}
